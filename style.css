@@ -1,0 +1,558 @@
+/* Hereby is the URL of my video:
+https://www.youtube.com/watch?v=gK5NBAurzIY */
+
+
+	/*## Asterisk (*) it resets all the elements paddings and margins and makes them look the same in all browsers ##*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1504579264001-833438f93df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    max-width: 100%;
+    background-size: contain;
+    contain: content;
+    backdrop-filter: blur(8px);
+    font-size: 30px;
+}
+/* a 100% width header. I used z-index property to bring it (the header) back to the front of the banner. Everything on the page has a z-index of 0 by default.*/
+header{
+    text-align: center;
+    background-color: rgb(14, 188, 188);
+    z-index: 1;
+    padding: 11px;
+    width: 100%;
+}
+
+header h1{
+    color: honeydew;
+    border: honeydew solid 8px;
+    border-radius: 40px;
+    display: inline-block;
+    padding: 7px 14px;
+    margin: 10px;
+    font-size: 1.7em;
+
+}
+
+/* The logo floats left*/
+header img{
+    float: left;
+    width: 110px;
+}
+
+/* I position this element (the banner) realtively so I can position something else (the welcome) inside it abolutely relative to the parent*/
+.banner{
+    position: relative;
+}
+
+.banner img{
+    max-width: 100%;
+}
+
+/* I position the welcome absolutely relative to the banner. So we can see it on the top of the image*/
+.banner .welcome{
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    color: #feb614;
+    background-color: rgba(64, 170, 188, 0.5);
+    padding: 30px;
+}
+
+/* I used span tag to target "ParrotsClub"and make it bigger and bolder than the rest*/ 
+.banner .welcome span{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* A sticky nav. I gave a sticky position. When it gets to the top it will stick there. */
+nav{
+    background-color: rgba(14, 170, 188);
+    padding: 30px; 
+    position: sticky;
+    top: 0;
+    box-shadow: #40aabcb3 11px 35px 35px;
+    /* text-align: center; */
+
+}
+nav ul{
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+.main-nav li{
+    display: inline-block;
+    width: 25%;
+    font-size: 1.1em;
+    text-align: center;
+}
+.main-nav ul li a{
+    color: #feb614;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* With <main> I have here the main section of my website; the content of the homepage. The max-width is 100% so nothing is going to go off the page. */
+main{
+    max-width: 100%;
+    width: 1200px;
+    margin: 60px auto; /* The margin will be equally distributed right and left because of "auto value"*/
+    box-sizing: border-box; /*Nothing will go off with smaller screens*/
+    }
+
+/* An introduction about parrots with a short text and an image*/
+.intro{
+    display: block;
+    background-color: rgba(0, 128, 99, 0.4);
+    margin: 50px auto;
+    border-radius: 55px 111px;
+    padding: 33px;
+    color: honeydew;
+}
+
+.intro img{
+    width: 400px;
+    float: right;
+    border-radius: 133px 30px;
+    padding: 20px 1px;
+    margin: -180px -75px 11px 11px;
+}
+
+.personality{
+    display: block;
+    background: rgba(64, 170, 188, 0.4);
+    border-radius: 210px 20px;
+    margin: 35px auto;
+    color: honeydew;
+    border: 1px white solid;
+    box-shadow: honeydew 5px 5px 10px;
+    padding: 33px;
+}
+
+.personality img{
+    width: 400px;
+    float: right;
+    margin: 25px;
+    margin-top: 0;
+    border-radius: 20px;
+}
+
+.intro h2, .personality h2{
+    display: inline-block;
+    color: rgb(64, 170, 188);
+    background: honeydew;
+    padding: 20px;
+    font-size: 1.3em;
+    border-radius: 22px 44px;
+    margin-top: 22px;
+    margin-left: 22px;
+}
+
+.personality p, .intro p{
+    padding: 35px 40px;
+}
+
+iframe{
+    float: right;
+    border-radius: 20px;
+    width: 400px;
+    height: 270px;
+    margin-left: 33px;
+    margin-bottom: 33px;
+    border-radius: 20px;
+}
+
+/* A div with class gallery1. It contains some images of popular parrots, in addition to internal links to other parts of the website*/
+#popular{
+    text-align: center;
+    display: block;
+    background: rgba(64, 170, 188, 0.6);
+    margin: 50px auto;
+    border-radius: 55px;
+    padding: 25px;
+    color: #feb614;
+}
+
+#popular .gallery1{
+    width: 100%;
+}
+
+#popular .gallery1 a{
+    max-width: 22%;
+    text-decoration: none;
+    color: greenyellow;
+    display: inline-block;
+    border: #feb614 2px solid;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 22px;
+}
+#popular img{
+    width: 100%;
+    border-radius: 20px;
+    /* margin-bottom: 33px; */
+}
+.desc{
+    /* margin: 3px; */
+}
+
+/* An orderd list of some fun and interesting facts about parrots. I used a specifiec width and height. Then I added the property overflow with the value auto (scroll bars when needed)*/
+.fun-facts{
+    background: rgba(64, 170, 188, 0.6);
+    width: 52%;
+    height: 400px;
+    overflow: auto;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 40px 65px;
+    color: honeydew;
+}
+.fun-facts h3, .age h3{
+    color: tomato;
+    padding: 10px;
+    font-size: 1.1em;
+    background-color: rgb(240, 255, 240, 0.5);
+    display: inline-block;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+/* A contact form includes two inputs (a name and an email) and one textarea*/
+#contact{
+    float: right;
+    width: 22%;
+    color: greenyellow;
+    background-color: rgba(0, 128, 0, 0.3);
+    text-align: center;
+    border: #feb614 4px double;
+    padding: 20px 20px;
+    border-radius: 20px;
+    margin: 20px;
+}
+#contact form{
+    max-width: 400px;
+    margin: 20px auto;
+}
+#contact input, #contact textarea{
+    width: 100%;
+    margin: 10px 0;
+    background-color: rgba(174, 247, 241, 0.4);
+    border-radius: 10px;
+    color: honeydew;
+    border: 2px solid honeydew;
+    padding: 6px 0px;
+
+}
+
+button{
+    color: honeydew;
+    background-color: rgb(49, 116, 160, 0.5);
+    padding: 7px 25px;
+    border: 5px solid honeydew;
+    border-radius: 20px;
+    box-shadow: 5px 7px 11px rgba(240, 255, 240, 0.6);
+    font: 0.6em bold;
+}
+
+button:hover{
+    color:  rgb(49, 116, 160, 0.5);
+    background-color: honeydew;
+    font-weight: bold;
+}
+
+/* A table about the life span of some parrots. I added two table hds in the thead and then two td per row in the tbody*/
+.age{
+    border-radius: 22px;
+    width: 90%;
+    margin: 22px auto;
+    padding: 30px;
+    color: honeydew;
+    background: rgba(64, 170, 188, 0.6);
+    /* overflow: hidden; */
+}
+.age h3{
+    margin: 25px;
+    color: tomato;
+}
+table{
+    width: 100%;
+}
+th{
+    color: rgb(245, 232, 120);
+}
+th, td{
+    border: honeydew solid 3px;
+    padding: 10px 20px;
+}
+
+/* A simple footer with copyright floats left and social media to follow icons float right.*/
+footer{
+    background: rgba(64, 170, 188, 0.6);
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+footer li{
+    margin: auto 15px;
+    list-style-type: none;
+}
+.social img{
+    width: 45px;
+    float: right;
+    margin: auto 10px;
+}
+
+.copyright{
+    float: left;
+    margin: 1% 1%;
+    font-size: 0.7em;
+    color: darkslategrey;
+}
+
+
+
+@media (max-width: 1025px){
+    body{
+        font-size: 26px;
+    }
+    .intro img{
+        width: 330px;
+        margin: -170px -75px 11px 11px;
+    }
+    .personality img{
+        width: 330px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .personality p, .intro p{
+        padding: 25px 40px;
+    
+    }
+    
+    iframe{
+        width: 330px;
+        height: 225px;
+        margin-left: 25px;
+        margin-bottom: 20px;
+    }
+    main{
+        max-width: 100%;
+        width: 90%;
+        margin: 30px auto;
+    }
+    #contact{
+        width: 70%;
+        /* text-align: center; */
+        margin: 20px 100px;
+    }
+    
+    .fun-facts{
+
+        width: 80%;
+        height: 300px;
+        margin: 20px auto;
+    }
+}
+
+
+@media (max-width: 768px){
+    body{
+        font-size: 22px;
+    }
+    .intro img{
+        width: 280px;
+        margin: -150px -55px 10px 10px;
+    }
+    .personality img{
+        width: 280px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+    }
+
+    .personality p, .intro p{
+        padding: 20px 20px;
+    
+    }
+    
+    iframe{
+        width: 280px;
+        height: 200px;
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+    main{
+        max-width: 100%;
+        width: 90%;
+        margin: 30px auto;
+    }
+    #contact{
+        /* width: 70%; */
+        /* text-align: center; */
+        /* margin: 20px 100px; */
+    }
+    
+    .fun-facts{
+        /* width: 80%; */
+        height: 275px;
+        /* margin: 20px auto; */
+    }
+    footer{
+        height: 45px;
+    }
+}
+
+@media (max-width: 600px){
+    body{
+        font-size: 20px;
+    }
+    .intro img{
+        width: 350px;
+        float: none;
+        margin: 20px auto;
+    }
+    .personality img{
+    width: 350px;
+    padding-left: 10x auto;
+    margin: 30px auto;
+    float: none;
+    }
+
+    .personality p, .intro p{
+        padding: 15px 15px;
+    
+    }
+    
+    iframe{
+    float: none;
+    width: 350px;
+    height: 240px;
+    margin: 25px auto;
+    }
+    
+    #contact{
+        width: 90%;
+        /* text-align: center; */
+        margin: 30px auto;
+    }
+    #contact form{
+        max-width: 300px;
+        margin: 10px auto;
+    }
+    .fun-facts{
+        /* width: 80%; */
+        height: 250px;
+        /* margin: 30px auto; */
+        /* float: none; */
+
+    }
+    footer{
+        height: 40px;
+    }
+
+    .social img{
+        width: 37px;
+        margin: auto 12px;
+        }
+        
+    .main-nav li{
+            width: 24%;
+            font-size: 1em;
+}
+    #popular .gallery1 a{
+    max-width: 100%;
+    display: block;
+    margin: 30px;
+}
+}
+
+@media (max-width: 450px){
+    body{
+        font-size: 18px;
+    }
+
+    header img{
+        width: 80px;
+    }
+.banner .welcome{
+    top: 60%;
+    padding: 10px;
+}
+
+.intro img{
+    width: 250px;
+    float: none;
+    margin: 5px auto;
+}
+    
+.personality img{
+    width: 250px;
+    margin: 20px;
+    float: none;
+    }
+
+    .personality p, .intro p{
+        padding: 15px 10px;
+    
+    }
+    
+    iframe{
+    float: none;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    }
+    
+    
+    .fun-facts{
+        
+        /* width: 80%; */
+        height: 220px;
+        margin: 20px auto;
+        /* margin-left: -22px; */
+    }
+
+    .social img{
+        width: 30px;
+        }
+
+        nav{
+            padding: 15px; 
+            top: 0;        
+        }
+
+        nav ul{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .main-nav li{
+            display: block;
+            width: 100%;
+            font-size: 1.3em;
+            margin: 5px;
+            text-align: left;
+            
+}
+
+        #popular .gallery1 a{
+            max-width: 100%;
+            display: block;
+            margin: 30px;
+}
+
+}
+
+@media (max-width: 376px){
+    body{
+        font-size: 16px;
+    }
+
+    iframe{
+        float: none;
+        margin: 20px auto;
+        }
+}
